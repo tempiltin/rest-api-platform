@@ -3,10 +3,12 @@ const dotenv = require("dotenv").config()
 const port = process.env.PORT || 5000
 
 const Index = require("./Routes/Index")
+const Home = require("./Routes/home")
 const app = express()
 
 
 app.use("/api/v1/users" , Index)
+app.use("/" , Home)
 
 const start = async () => {
     try {
