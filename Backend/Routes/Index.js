@@ -1,17 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const dataAPi = require("../../api/db")
+console.log(dataAPi);
 
-const data =[
-    {name:"https://www.youtube.com/watch?v=-0exw-9YJBo",age:25,years:2000},
-    {name:"name",age:25,years:2000},
-    {name:"name",age:25,years:2000},
-    {name:"name",age:25,years:2000},
-    {name:"name",age:25,years:2000},
-    {name:"name",age:25,years:2000},
-]
 
 router.get("/" , (req,res)=>{
-    res.status(200).json(data)
+    res.status(200).json(dataAPi)
 })
 
 router.post("/" , (req,res)=>{
